@@ -82,7 +82,6 @@
             help: 'text-gray-500',
           }"
         />
-        <!-- <FormKitSchema :schema="schema" /> -->
         <p class="mt-4 text-xs">
           By signing in, you agree to Terms of service and Privacy policy.
         </p>
@@ -109,88 +108,6 @@ export default {
         instructions: '',
       },
       classes,
-      schema: [
-        {
-          $cmp: 'FormKit',
-          props: {
-            type: 'text',
-            name: 'email',
-            label: 'Email',
-            validation: 'required|email',
-            classes: {
-              label: classes.label,
-              input: classes.input,
-              error: 'text-red-500',
-              help: 'text-gray-500',
-            },
-          },
-        },
-        {
-          $cmp: 'FormKit',
-          props: {
-            type: 'password',
-            name: 'password',
-            label: 'Password',
-            validation: 'required|min:6',
-            classes: {
-              label: classes.label,
-              input: classes.input,
-              error: 'text-red-500',
-              help: 'text-gray-500',
-            },
-          },
-        },
-        {
-          $cmp: 'FormKit',
-          props: {
-            type: 'text',
-            name: 'username',
-            label: 'Username',
-            validation: 'required|min:6',
-            help: 'Use only letters, numbers, underscores and periods',
-            classes: {
-              label: classes.label,
-              input: classes.input,
-              error: 'text-red-500',
-              help: 'text-gray-500',
-            },
-          },
-        },
-        {
-          $cmp: 'FormKit',
-          props: {
-            type: 'select',
-            name: 'dancing_in',
-            label: 'Dancing in',
-            placeholder: 'City',
-            options: ['Pizza', 'Ice Cream', 'Burger'],
-            help: 'In which city are you currently dancing?',
-            classes: {
-              label: classes.label,
-              input: classes.input,
-              error: 'text-red-500',
-              help: 'text-gray-500',
-            },
-          },
-        },
-        {
-          $cmp: 'FormKit',
-          props: {
-            type: 'select',
-            name: 'living_in',
-            label: 'Living in',
-            placeholder: 'City',
-            options: ['Pizza', 'Ice Cream', 'Burger'],
-            help: "What's your permanent residence?",
-            classes: {
-              label: classes.label,
-              input: classes.input,
-              error: 'text-red-500',
-              help: 'text-gray-500',
-            },
-          },
-        },
-      ],
     }
   },
   methods: {
