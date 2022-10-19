@@ -1,31 +1,32 @@
 lockfileVersion: 5.4
 
-importers:
+specifiers:
+  '@formkit/nuxt': 1.0.0-beta.11
+  '@formkit/vue': 1.0.0-beta.11
+  '@intlify/nuxt3': ^0.2.4
+  '@nuxt/ufo': ^0.5.4
+  '@nuxtjs/tailwindcss': ^5.3.5
+  nuxt: 3.0.0-rc.8
+  tailwindcss: ^3.1.8
+  vite: ^2.9.0
+  vue: ^3.2.41
+  vue-i18n: ^9.2.2
+  webpack: 5.0.0
 
-  .:
-    specifiers:
-      '@formkit/nuxt': 1.0.0-beta.11
-      '@formkit/vue': 1.0.0-beta.11
-      '@intlify/nuxt3': ^0.2.4
-      '@nuxtjs/tailwindcss': ^5.3.5
-      nuxt: 3.0.0-rc.8
-      tailwindcss: ^3.1.8
-      vite: ^2.9.0
-      vue: ^3.2.41
-      vue-i18n: ^9.2.2
-      webpack: 5.0.0
-    dependencies:
-      '@formkit/nuxt': 1.0.0-beta.11_y3dipznrij4i4zlirfebykylla
-      '@formkit/vue': 1.0.0-beta.11_y3dipznrij4i4zlirfebykylla
-      vite: 2.9.15
-      vue: 3.2.41
-      vue-i18n: 9.2.2_vue@3.2.41
-      webpack: 5.0.0
-    devDependencies:
-      '@intlify/nuxt3': 0.2.4_isxgeu7fgksaytebh5jhe4wsxy
-      '@nuxtjs/tailwindcss': 5.3.5_webpack@5.0.0
-      nuxt: 3.0.0-rc.8
-      tailwindcss: 3.1.8
+dependencies:
+  '@formkit/nuxt': 1.0.0-beta.11_y3dipznrij4i4zlirfebykylla
+  '@formkit/vue': 1.0.0-beta.11_y3dipznrij4i4zlirfebykylla
+  '@nuxt/ufo': 0.5.4
+  vite: 2.9.15
+  vue: 3.2.41
+  vue-i18n: 9.2.2_vue@3.2.41
+  webpack: 5.0.0
+
+devDependencies:
+  '@intlify/nuxt3': 0.2.4_isxgeu7fgksaytebh5jhe4wsxy
+  '@nuxtjs/tailwindcss': 5.3.5_webpack@5.0.0
+  nuxt: 3.0.0-rc.8
+  tailwindcss: 3.1.8
 
 packages:
 
@@ -885,6 +886,11 @@ packages:
     transitivePeerDependencies:
       - supports-color
     dev: true
+
+  /@nuxt/ufo/0.5.4:
+    resolution: {integrity: sha512-JZOGDlt2BvLCBmLhrchhRJ6tP9PBfSWLdsHC+JVJ5Qp8/hT/2u61cSsLS30zUOwcPRaQ3y2oHNkEiKJ5v90iEQ==}
+    deprecated: please migrate to ufo npm package
+    dev: false
 
   /@nuxt/ui-templates/0.3.3:
     resolution: {integrity: sha512-EgxICRWv+VCkt3wjCuJUJqNOFACF3h6FX3Mj+hDXshf6ECvl/y8BWEVGC5T2N8tE/bFcNC6rEJxPsp4s+4+XOQ==}
