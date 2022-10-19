@@ -14,7 +14,8 @@
     >
       <div class="space-y-4">
         <img
-          src=""
+          src="
+        ./static/svg/logo-horizontal-dark.svg"
           alt=""
           class="w-40 justify-center align-middle mx-auto"
         />
