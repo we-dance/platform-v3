@@ -11,12 +11,12 @@ Community platform for dancers
 
 ## Setup
 
-Install [nvm](https://github.com/nvm-sh/nvm#installing-and-updating) and [pnPm](https://pnpm.io/)
+Install [nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
 Run commands:
 
 ```bash
 nvm use # install node version defined in .nvmrc
-pnpm install --shamefully-hoist # install dependencies
-pnpm run dev -o # start the development server on http://localhost:3000
+yarn install # install dependencies
+yarn dev -o # start the development server on http://localhost:3000
 ```
