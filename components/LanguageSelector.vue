@@ -7,8 +7,10 @@
 </template>
 
 <script setup>
-import { useI18n } from 'vue-i18n'
-const { locale, availableLocales } = useI18n()
+const availableLocales = ['en', 'de', 'es', 'ru']
+const locale = ref('en')
+// import { useI18n } from 'vue-i18n'
+// const { locale, availableLocales } = useI18n()
 
 onMounted(() => {
   locale.value = navigator.language

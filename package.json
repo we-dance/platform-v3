@@ -7,7 +7,6 @@
     "preview": "nuxt preview"
   },
   "devDependencies": {
-    "@intlify/nuxt3": "^0.2.4",
     "@nuxtjs/tailwindcss": "^5.3.5",
     "nuxt": "3.0.0-rc.8",
     "tailwindcss": "^3.1.8"
