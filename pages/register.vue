@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-slate-700 flex justify-center items-center min-h-screen">
+  <div class="bg-[#210309] flex justify-center items-center min-h-screen">
     <FormKit
       type="form"
       v-model="data"
@@ -9,10 +9,17 @@
     "
       :submit-attrs="{
         'input-class':
-          ' ml-[240px] bg-red-700 mt-3 no-underline text-white font-semibold py-2 px-4 rounded-full hover:text-white hover:bg-black shadow cursor-pointer outline-none focus:outline-none inline-block',
+          ' ml-[240px] bg-[#F1023D] mt-3 no-underline text-white font-semibold py-2 px-4 rounded-full hover:text-white hover:bg-black shadow cursor-pointer outline-none focus:outline-none inline-block',
       }"
     >
       <div class="space-y-4">
+        <img
+          src="
+        ./static/svg/logo-horizontal-dark.svg"
+          alt=""
+          class="w-40 justify-center align-middle mx-auto"
+        />
+
         <!-- <FormKit
           type="text"
           label="Email"
@@ -80,17 +87,19 @@
             help: 'text-gray-500',
           }"
         /> -->
-        <FormKitSchema :schema="schema"  />
+        <FormKitSchema :schema="schema" />
+        <p class="mt-4 text-xs">By signing in, you agree to Terms of service and Privacy policy.</p>
+        
       </div>
     </FormKit>
   </div>
 </template>
 
 <script>
-
 const classes = {
   label: 'block text-gray-700 text-sm font-bold mb-2',
-  input: 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline',
+  input:
+    'block text-sm w-full px-3 py-2 transition duration-100 ease-in-out border rounded shadow-sm focus:ring-2 focus:ring-blue-500 focus:outline-none focus:ring-opacity-50 disabled:opacity-50 disabled:cursor-not-allowed text-black placeholder-gray-400 bg-white border-gray-300 focus:border-blue-500 ',
 }
 
 export default {
