@@ -1,3 +1,3 @@
 <template>
-  <NuxtLink to="/events/-/edit">Add Event</NuxtLink>
+  <NuxtLink to="/events/-/edit">{{ $t('Add Event') }}</NuxtLink>
 </template>

@@ -14,6 +14,7 @@
     "nuxt": "3.0.0-rc.12"
   },
   "dependencies": {
+    "@intlify/nuxt3": "^0.2.4",
     "@formkit/vue": "1.0.0-beta.11"
   }
 }

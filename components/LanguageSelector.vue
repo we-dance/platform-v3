@@ -7,12 +7,10 @@
 </template>
 
 <script setup>
-const availableLocales = ['en', 'de', 'es', 'ru']
-const locale = ref('en')
-// import { useI18n } from 'vue-i18n'
-// const { locale, availableLocales } = useI18n()
+import { useI18n } from 'vue-i18n'
+const { locale, availableLocales } = useI18n()
 
 onMounted(() => {
-  locale.value = navigator.language
+  locale.value = navigator.language.split('-')[0]
 })
 </script>
