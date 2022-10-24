@@ -17,7 +17,7 @@
 
         <FormKit
           type="text"
-          label="Email"
+          :label="$t('Email')"
           name="email"
           validation="required|email"
           :classes="{
@@ -29,7 +29,7 @@
         />
         <FormKit
           type="password"
-          label="Password"
+          :label="$t('Password')"
           name="password"
           validation="required|min:6"
           :classes="{
@@ -41,10 +41,15 @@
         />
         <FormKit
           type="text"
-          label="Username"
+          :label="$t('Username')"
           name="username"
-          validation="required|min:6"
-          help="Use only letters, numbers, underscores and periods"
+          validation="username_validation"
+          validation-visibility="live"
+          :validation-rules="{ username_validation }"
+          :validation-messages="{
+            username_validation: $t('Ivalid Character'),
+          }"
+          :help="$t('Use only letters, numbers, underscores and periods')"
           :classes="{
             label: classes.label,
             input: classes.input,
@@ -55,11 +60,11 @@
 
         <FormKit
           type="select"
-          label="Dancing in"
+          :label="$t('Dancing in')"
           name="dancing_in"
           placeholder="City"
           :options="['Pizza', 'Ice Cream', 'Burger']"
-          help="In which city are you currently dancing?"
+          :help="$t('In which city are you currently dancing?')"
           :classes="{
             label: classes.label,
             input: classes.input,
@@ -70,11 +75,11 @@
 
         <FormKit
           type="select"
-          label="Living in"
+          :label="$t('Living in')"
           name="living_in"
           placeholder="City"
           :options="['Pizza', 'Ice Cream', 'Burger']"
-          help="What's your permanent residence?"
+          :help="$t('What\'s your permanent residence?')"
           :classes="{
             label: classes.label,
             input: classes.input,
@@ -83,7 +88,11 @@
           }"
         />
         <p class="mt-4 text-xs">
-          By signing in, you agree to Terms of service and Privacy policy.
+          {{
+            $t(
+              'By signing in, you agree to Terms of service and Privacy policy.'
+            )
+          }}
         </p>
       </div>
     </FormKit>
@@ -99,15 +108,25 @@ const classes = {
 
 const logo = './static/svg/logo-horizontal-dark.svg'
 
+// custom validation for formkit that checks "only letters, numbers, underscores and periods"
+const user_validation = function ({value}) {
+  return new Promise((resolve, reject) => {
+    resolve( value === '' || /^[a-zA-Z0-9_.]+$/.test(value) )
+  })
+}
+
 export default {
   data() {
     return {
       data: {
         email: '',
-        favorite_food: '',
-        instructions: '',
+        password: '',
+        username: '',
+        dancing_in: '',
+        living_in: '',
       },
       classes,
+      username_validation: user_validation,
     }
   },
   methods: {
