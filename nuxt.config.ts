@@ -1,5 +1,6 @@
 export default defineNuxtConfig({
-  modules: ['@nuxtjs/tailwindcss', '@intlify/nuxt3'],
+  ssr: false,
+  modules: ['@nuxtjs/tailwindcss', '@intlify/nuxt3', '@formkit/nuxt'],
   intlify: {
     localeDir: 'locales',
     vueI18n: {
