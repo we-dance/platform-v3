@@ -87,6 +87,9 @@
             help: 'text-gray-500',
           }"
         />
+
+        <FormKit :type="otp" label="Formkit Search" :options="TestOptions" />
+
         <p class="mt-4 text-xs">
           {{
             $t(
@@ -94,12 +97,36 @@
             )
           }}
         </p>
+        <!-- pass in options as a prop -->
+        <!-- <InputAutoComplete :options="TestOptions" /> -->
       </div>
     </FormKit>
   </div>
 </template>
 
-<script>
+<script setup>
+import { createInput } from '@formkit/vue'
+import InputAutoComplete from '~~/components/InputAutoComplete.vue'
+
+const otp = createInput(InputAutoComplete, {
+  props: ['options'],
+})
+
+const TestOptions = [
+  'Germany',
+  'France',
+  'Italy',
+  'Spain',
+  'Portugal',
+  'United Kingdom',
+  'Netherlands',
+  'Belgium',
+  'Luxembourg',
+  'Austria',
+  'Switzerland',
+  'Sweden',
+]
+
 const classes = {
   label: 'block text-gray-700 text-sm font-bold mb-2',
   input:
@@ -109,31 +136,10 @@ const classes = {
 const logo = './static/svg/logo-horizontal-dark.svg'
 
 // custom validation for formkit that checks "only letters, numbers, underscores and periods"
-const user_validation = function ({value}) {
+const user_validation = function ({ value }) {
   return new Promise((resolve, reject) => {
-    resolve( value === '' || /^[a-zA-Z0-9_.]+$/.test(value) )
+    resolve(value === '' || /^[a-zA-Z0-9_.]+$/.test(value))
   })
 }
 
-export default {
-  data() {
-    return {
-      data: {
-        email: '',
-        password: '',
-        username: '',
-        dancing_in: '',
-        living_in: '',
-      },
-      classes,
-      username_validation: user_validation,
-    }
-  },
-  methods: {
-    handleSubmit() {
-      // Do something with the data
-      console.log(this.data)
-    },
-  },
-}
 </script>
