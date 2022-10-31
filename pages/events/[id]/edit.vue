@@ -1,3 +1,3 @@
 <template>
-  <div>Event Edit</div>
+  <div>{{ $t('Edit Event') }}</div>
 </template>
