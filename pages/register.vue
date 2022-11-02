@@ -59,11 +59,11 @@
         />
 
         <FormKit
-          type="select"
+          :type="autoComplete"
           :label="$t('Dancing in')"
           name="dancing_in"
           placeholder="City"
-          :options="['Pizza', 'Ice Cream', 'Burger']"
+          :options="TestOptions"
           :help="$t('In which city are you currently dancing?')"
           :classes="{
             label: classes.label,
@@ -74,11 +74,11 @@
         />
 
         <FormKit
-          type="select"
+          :type="autoComplete"
           :label="$t('Living in')"
           name="living_in"
           placeholder="City"
-          :options="['Pizza', 'Ice Cream', 'Burger']"
+          :options="TestOptions"
           :help="$t('What\'s your permanent residence?')"
           :classes="{
             label: classes.label,
@@ -87,9 +87,6 @@
             help: 'text-gray-500',
           }"
         />
-
-        <FormKit :type="otp" label="Formkit Search" :options="TestOptions" />
-
         <p class="mt-4 text-xs">
           {{
             $t(
@@ -97,8 +94,6 @@
             )
           }}
         </p>
-        <!-- pass in options as a prop -->
-        <!-- <InputAutoComplete :options="TestOptions" /> -->
       </div>
     </FormKit>
   </div>
@@ -108,7 +103,7 @@
 import { createInput } from '@formkit/vue'
 import InputAutoComplete from '~~/components/InputAutoComplete.vue'
 
-const otp = createInput(InputAutoComplete, {
+const autoComplete = createInput(InputAutoComplete, {
   props: ['options'],
 })
 
@@ -141,5 +136,4 @@ const user_validation = function ({ value }) {
     resolve(value === '' || /^[a-zA-Z0-9_.]+$/.test(value))
   })
 }
-
 </script>
