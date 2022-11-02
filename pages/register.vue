@@ -63,7 +63,7 @@
           :label="$t('Dancing in')"
           name="dancing_in"
           placeholder="City"
-          :options="TestOptions"
+          :options="country"
           :help="$t('In which city are you currently dancing?')"
           :classes="{
             label: classes.label,
@@ -78,7 +78,7 @@
           :label="$t('Living in')"
           name="living_in"
           placeholder="City"
-          :options="TestOptions"
+          :options="country"
           :help="$t('What\'s your permanent residence?')"
           :classes="{
             label: classes.label,
@@ -107,7 +107,7 @@ const autoComplete = createInput(InputAutoComplete, {
   props: ['options'],
 })
 
-const TestOptions = [
+const country = [
   'Germany',
   'France',
   'Italy',
