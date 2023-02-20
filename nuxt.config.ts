@@ -6,4 +6,5 @@ export default defineNuxtConfig({
       locale: 'en',
     },
   },
+  css: ['@fortawesome/fontawesome-svg-core/styles.css'],
 })
