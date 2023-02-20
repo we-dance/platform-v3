@@ -64,6 +64,7 @@ export default {
         icon: 'rounded-full hover:text-primary',
         toggled: xrounded + toggledColor,
         primary: xrounded + primaryColor,
+        tertiary: xrounded + baseColor + ' underline',
         success: xrounded + successColor,
         danger: xrounded + dangerColor,
         link: 'underline hover:no-underline font-semibold',
