@@ -1,6 +1,6 @@
 <template>
-  <button type="button" :class="classes">
-    {{ title }}
+  <button type="button" :class="classes" :title="title">
+    <!-- {{ title }} -->
     <slot>
       <TIcon v-if="icon" :size="iconSize" :name="icon" />
       <span v-if="label !== false"> {{ label }}</span>
@@ -19,7 +19,7 @@ export default {
   props: {
     title: {
       type: String,
-      default: () => 'Button',
+      default: 'continue',
     },
     type: {
       type: String,
@@ -46,7 +46,7 @@ export default {
       const xrounded =
         xbase + ' text-sm leading-4 justify-center shadow rounded-full'
       const primaryColor =
-        ' bg-dark text-white border-gray-900 hover:bg-gray-800'
+        ' bg-black text-white border-gray-900 hover:bg-gray-800'
       const successColor =
         ' bg-green-500 text-white border-green-500 hover:bg-green-800'
       const dangerColor =
