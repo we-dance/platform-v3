@@ -14,6 +14,7 @@
       type="tertiary"
       label="tertiary button"
       icon="AcademicCapIcon"
+      iconRight="PlusIcon"
     ></TButton>
     <TButton
       type="danger"
