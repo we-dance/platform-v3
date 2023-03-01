@@ -1,9 +1,16 @@
 <template>
-  <div :class="classes" v-html="require(`../static/svg/${name}.svg`)" />
+  <component :class="classes" :is="heroIcons[name]" />
 </template>
 
 <script>
+import * as heroIcons from '@heroicons/vue/24/solid'
+
 export default {
+  data() {
+    return {
+      heroIcons,
+    }
+  },
   props: {
     name: {
       type: String,
@@ -11,16 +18,11 @@ export default {
     },
     size: {
       type: String,
-      default: '',
     },
   },
   computed: {
     classes() {
-      if (!this.size) {
-        return ''
-      }
-
-      return `w-${this.size} h-${this.size}`
+      return !this.size ? 'w-6 h-6' : `w-${this.size} h-${this.size}`
     },
   },
 }

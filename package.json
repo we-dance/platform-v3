@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@formkit/vue": "1.0.0-beta.11",
-    "@intlify/nuxt3": "^0.2.4",
-    "@vue-hero-icons/outline": "^1.7.2"
+    "@heroicons/vue": "^2.0.16",
+    "@intlify/nuxt3": "^0.2.4"
   }
 }

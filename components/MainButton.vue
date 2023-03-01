@@ -1,18 +1,28 @@
 <template>
   <div class="m-auto flex justify-center gap-5">
-    <TButton type="primary" label="primary button"></TButton>
-    <TButton type="secondary" label="secondary button"></TButton>
-    <TButton type="tertiary" label="tertiary button"></TButton>
-    <TButton type="danger" label="destructive button"></TButton>
+    <TButton
+      type="primary"
+      label="primary button"
+      icon="AcademicCapIcon"
+    ></TButton>
+    <TButton
+      type="secondary"
+      label="secondary button"
+      icon="AcademicCapIcon"
+    ></TButton>
+    <TButton
+      type="tertiary"
+      label="tertiary button"
+      icon="AcademicCapIcon"
+    ></TButton>
     <TButton
       type="danger"
       label="destructive button"
-      icon="AnnotationIcon "
+      icon="AcademicCapIcon"
+      iconRight="PlusIcon"
     ></TButton>
-    <AnnotationIcon size="1.5x" />
+    <TButton type="primary" icon="PlusIcon" />
   </div>
 </template>
 
-<script>
-import { AnnotationIcon } from '@vue-hero-icons/outline'
-</script>
+<script></script>

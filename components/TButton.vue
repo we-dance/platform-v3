@@ -1,6 +1,5 @@
 <template>
   <button type="button" :class="classes" :title="title">
-    <!-- {{ title }} -->
     <slot>
       <TIcon v-if="icon" :size="iconSize" :name="icon" />
       <span v-if="label !== false"> {{ label }}</span>
@@ -35,7 +34,7 @@ export default {
     },
     iconSize: {
       type: String,
-      default: '4',
+      default: '',
     },
   },
 
