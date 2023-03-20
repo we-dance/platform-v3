@@ -3,7 +3,6 @@
     <slot>
       <TIcon v-if="icon" :size="iconSize" :name="icon" />
       <span v-if="label !== false"> {{ label }}</span>
-      <TIcon v-if="iconRight" :size="iconSize" :name="iconRight" />
     </slot>
   </button>
 </template>
@@ -30,10 +29,6 @@ export default {
       default: false,
     },
     icon: {
-      type: String,
-      default: '',
-    },
-    iconRight: {
       type: String,
       default: '',
     },
