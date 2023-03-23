@@ -9,12 +9,12 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/kit": "^3.0.0-rc.12",
+    "@nuxt/kit": "3.0.0-rc.14",
     "@nuxtjs/tailwindcss": "^5.3.5",
-    "nuxt": "3.0.0-rc.12"
+    "nuxt": "3.0.0-rc.14"
   },
   "dependencies": {
-    "@intlify/nuxt3": "^0.2.4",
-    "@formkit/vue": "1.0.0-beta.11"
+    "@formkit/vue": "1.0.0-beta.11",
+    "@intlify/nuxt3": "^0.2.4"
   }
 }
